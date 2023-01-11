@@ -1,0 +1,27 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.8.187:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:2023-01-11 18:17:07.558460: Article '2020 CNCF Annual Report' retrieved
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:07] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:2023-01-11 18:17:09.453410: Article 'KubeCon + CloudNativeCon 2021' retrieved
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:09] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:11] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:13] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:15] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:2023-01-11 18:17:16.947225: New article with title 's' was created
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:16] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:2023-01-11 18:17:19.633194: Article 'CNCF Cloud Native Interactive Landscape' retrieved
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:19] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:2023-01-11 18:17:20.983264: 'About Us' page was retrieved
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:20] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jan/2023 18:17:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
