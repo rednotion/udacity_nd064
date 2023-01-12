@@ -30,5 +30,6 @@ jobs:
       with:
         context: "{{defaultContext}}:project" #./project/techtrends
         file: "./techtrends/Dockerfile"
+        platforms: linux/amd64, linus/arm64
         push: true
         tags: ${{ secrets.YOUR_DOCKERHUB_REPO }}/techtrends:latest
