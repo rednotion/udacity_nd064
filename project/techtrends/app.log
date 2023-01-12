@@ -1,0 +1,13 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.9.252:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Jan/2023 16:19:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Jan/2023 16:19:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:Status 200 OK
+INFO:werkzeug:127.0.0.1 - - [12/Jan/2023 16:19:20] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Jan/2023 16:19:57] "[35m[1mGET /healthz HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.9.252:3111/ (Press CTRL+C to quit)
+INFO:root:Status 200 OK
+INFO:werkzeug:127.0.0.1 - - [12/Jan/2023 16:20:59] "GET /healthz HTTP/1.1" 200 -
