@@ -10,6 +10,7 @@ spec:
       containers:
       - name: app
         image: rednotion/udacity_nd064_techtrends:latest
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             memory: "64Mi"
