@@ -1,10 +1,7 @@
-name: Docker Build and Push
-
+name: TechTrends - Package with Docker
 # triggers for action to run
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 # workflow
@@ -35,4 +32,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64, linus/arm64
           push: true
-          tags: {{ YOUR_DOCKERHUB_REPO }}/python-helloworld:latest
+          tags: {{ YOUR_DOCKERHUB_REPO }}/techtrends:latest
