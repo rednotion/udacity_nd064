@@ -29,6 +29,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: ${{ YOUR_DOCKERHUB_REPO }}/techtrends:latest
+        tags: ${{ secrets.YOUR_DOCKERHUB_REPO }}/techtrends:latest
         context: ./project/techtrends
         file: ./Dockerfile
