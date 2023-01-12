@@ -1,8 +1,8 @@
-name: TechTrends - Package with Docker
+name: "TechTrends - Package with Docker"
 # triggers for action to run
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 # workflow
 jobs:
