@@ -24,12 +24,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: project/techtrends
-          file: ./Dockerfile
-          platforms: linux/amd64, linus/arm64
-          push: true
-          tags: {{ YOUR_DOCKERHUB_REPO }}/techtrends:latest
+      # -
+      #   name: Build and push
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     context: project/techtrends
+      #     file: ./Dockerfile
+      #     platforms: linux/amd64, linus/arm64
+      #     push: true
+      #     tags: {{ YOUR_DOCKERHUB_REPO }}/techtrends:latest
