@@ -30,6 +30,6 @@ jobs:
         with:
           #context: ./project/techtrends
           #dockerfile: ./Dockerfile
-          platforms: linux/amd64, linus/arm64
+          #platforms: linux/amd64, linus/arm64
           push: true
           tags: {{ YOUR_DOCKERHUB_REPO }}/techtrends:latest
