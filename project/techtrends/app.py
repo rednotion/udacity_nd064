@@ -8,13 +8,12 @@ import logging
 # Set logging config
 logging.basicConfig(filename='app.log',level=logging.DEBUG)
 
-
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
-    #n_connections += 1
+    app.config['n_connections'] += 1
     return connection
 
 # Function to get a post using its ID
@@ -39,12 +38,17 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
+# Use config to define global variables
+app.config['n_connections'] = 0
+
 # Define the main route of the web application 
 @app.route('/')
 def index():
+
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     connection.close()
+
     return render_template('index.html', posts=posts)
 
 # Define how each individual article is rendered 
@@ -112,7 +116,7 @@ def metrics():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     metric_body = {
-        "db_connection_count": n_connections,
+        "db_connection_count": app.config['n_connections'],
         "post_count": len(posts), 
     }
     response = app.response_class(
@@ -126,5 +130,4 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
-   #n_connections=0
    app.run(host='0.0.0.0', port='3111')
