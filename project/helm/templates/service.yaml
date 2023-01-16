@@ -7,6 +7,5 @@ spec:
   ports:
   - port: {{ .Values.service.port }}
     protocol: {{ .Values.service.protocol }}
-    targetPort: {{ .Values.service.targetPort | .Values.service.port }}
-    # if targetPort specified, use that, else use default port
+    targetPort: {{ .Values.service.targetPort }}
   type: {{ .Values.service.type }}
