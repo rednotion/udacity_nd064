@@ -99,26 +99,26 @@ def create():
 # Healthcheck endpoint
 @app.route('/healthz')
 def healthcheck():
-    # 500 error
-    error_response = app.response_class(
-        response=json.dumps("result: ERROR - unhealthy"),
-        status=500,
-        mimetype="application/json"
-    )
+    # # 500 error
+    # error_response = app.response_class(
+    #     response=json.dumps("result: ERROR - unhealthy"),
+    #     status=500,
+    #     mimetype="application/json"
+    # )
 
-    # check if connection to DB fails
-    try: 
-        connection = sqlite3.connect('database.db')
-    except:
-        logging.info("Status 500 ERROR")
-        return error_response
+    # # check if connection to DB fails
+    # try: 
+    #     connection = sqlite3.connect('database.db')
+    # except:
+    #     logging.info("Status 500 ERROR")
+    #     return error_response
 
-    # check if posts db exists
-    try:
-        posts = connection.execute('SELECT * FROM posts').fetchall()
-    except:
-        logging.info("Status 500 ERROR")
-        return error_response
+    # # check if posts db exists
+    # try:
+    #     posts = connection.execute('SELECT * FROM posts').fetchall()
+    # except:
+    #     logging.info("Status 500 ERROR")
+    #     return error_response
 
     response = app.response_class(
         response=json.dumps("result: OK - healthy"),
