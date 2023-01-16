@@ -15,6 +15,6 @@ spec:
     ## set the path to the folder where the Helm chart is stored
     path: project/helm
     ## set the base repo
-    repoURL: https://github.com/udacity/nd064_course_1 
+    repoURL: https://github.com/rednotion/udacity_nd064
     targetRevision: HEAD
   syncPolicy: {}
