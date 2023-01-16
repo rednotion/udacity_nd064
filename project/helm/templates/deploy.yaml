@@ -3,8 +3,13 @@ kind: Deployment
 metadata:
   name: techtrends
   namespace: {{ .Values.namespace.name }}
+  labels:
+    app: techtrends
 spec:
   replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: techtrends
   template:
     spec:
       containers:
