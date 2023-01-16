@@ -5,8 +5,16 @@ metadata:
   namespace: sandbox
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: techtrends
+      tag: latest
   template:
     spec:
+      metadata:
+        labels:
+          app: techtrends
+          tag: latest
       containers:
       - name: app
         image: rednotion/udacity_nd064_techtrends:latest
@@ -22,13 +30,11 @@ spec:
           - containerPort: 3111
         readinessProbe:
           httpGet:
-            scheme: HTTPS
             path: /healthz
             port: 3111
           initialDelaySeconds: 10
           periodSeconds: 5
         livenessProbe:
           httpGet:
-            scheme: HTTPS
             path: /healthz
             port: 3111
