@@ -33,13 +33,11 @@ spec:
           - containerPort: {{ .Values.containerPort }}
         readinessProbe:
           httpGet:
-            scheme: HTTPS
             path: {{ .Values.readinessProbe.path }}
             port: {{ .Values.containerPort }}
           initialDelaySeconds: 10
           periodSeconds: 5
         livenessProbe:
           httpGet:
-            scheme: HTTPS
             path: {{ .Values.livenessProbe.path }}
             port: {{ .Values.containerPort }}
