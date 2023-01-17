@@ -6,7 +6,10 @@ from datetime import datetime
 import logging
 
 # Set logging config
-logging.basicConfig(filename='app.log',level=logging.DEBUG)
+stdout_handler = logging.StreamHandler(sys.stdout)
+stderr_handler = logging.StreamHandler(sys.stderr)
+handlers = [stderr_handler, stdout_handler]
+logging.basicConfig(filename='app.log',level=logging.DEBUG, handlers=handlers)
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`

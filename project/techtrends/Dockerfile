@@ -8,10 +8,10 @@ ADD . .
 
 # install dependencies
 RUN pip install -r requirements.txt 
+RUN python init_db.py
 
 # expose the port
 EXPOSE 3111
 
 # start the application
-CMD ["python", "init_db.py"]
 CMD ["python", "app.py"]
